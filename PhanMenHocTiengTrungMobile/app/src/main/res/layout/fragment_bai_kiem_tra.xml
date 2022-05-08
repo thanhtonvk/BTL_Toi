@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="40dp">
+
+                <ImageView
+                    android:id="@+id/btn_bai0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00FFEA00"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_bai1" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:text="Tìm hiểu bản thân" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="40dp">
+
+                <ImageView
+                    android:id="@+id/btn_bai1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00FFEA00"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_bai2" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:text="Câu hỏi nghề nghiệp" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="40dp">
+
+                <ImageView
+                    android:id="@+id/btn_bai2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00FFEA00"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_bai3" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:text="Quốc tịch" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="40dp">
+
+                <ImageView
+                    android:id="@+id/btn_bai3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00FFEA00"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_bai4" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Thành viên trong gia đình" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="40dp">
+
+                <ImageView
+                    android:id="@+id/btn_bai4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00FFEA00"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_bai5" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="180dp"
+                android:text="Khả năng ngôn ngữ" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="40dp">
+
+                <ImageView
+                    android:id="@+id/btn_bai5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00FFEA00"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_bai6" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:text="Đếm số 1-5" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="40dp">
+
+                <ImageView
+                    android:id="@+id/btn_bai6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00FFEA00"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_bai7" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:text="Đếm sồ từ 6-10" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="40dp">
+
+                <ImageView
+                    android:id="@+id/btn_bai7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00FFEA00"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_bai8" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:text="Ngày tháng trong năm" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="40dp">
+
+                <ImageView
+                    android:id="@+id/btn_bai8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00FFEA00"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_bai9" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:text="Thời gian" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="40dp">
+
+                <ImageView
+                    android:id="@+id/btn_bai9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00FFEA00"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_bai10" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:text="Cuộc sống hàng ngày" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

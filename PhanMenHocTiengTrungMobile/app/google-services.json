@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "753265918048",
+    "project_id": "phanmemhoctiengtrung",
+    "storage_bucket": "phanmemhoctiengtrung.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753265918048:android:366646f3c04cd1279d4305",
+        "android_client_info": {
+          "package_name": "com.example.phanmemhoctiengtrung"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753265918048-sok8v201cjb785o91giedtc53g5ai0e9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjaT-FHDsNCGX4Lp6MGsVMlGuSyTDS0xA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753265918048-sok8v201cjb785o91giedtc53g5ai0e9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
