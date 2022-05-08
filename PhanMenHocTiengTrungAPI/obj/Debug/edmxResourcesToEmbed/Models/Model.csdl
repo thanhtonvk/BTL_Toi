@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PhanMemHocTiengTrungModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BaiDaHoc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idBaiHoc" Type="Int32" Nullable="false" />
+    <Property Name="idTaiKhoan" Type="Int32" Nullable="false" />
+    <Property Name="diem" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BaiHoc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="chude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idYoutube" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="diem" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BaiKiemTra">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idBaiHoc" Type="Int32" Nullable="false" />
+    <Property Name="idTaiKhoan" Type="Int32" Nullable="false" />
+    <Property Name="diem" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ChiTietBaiHoc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idBaiHoc" Type="Int32" Nullable="false" />
+    <Property Name="tuonghinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="nghiatiengviet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="amthanh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="video" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="a" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="b" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="c" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="d" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dapdan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="hoten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ngaysinh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sdt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="hinhanh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="level" Type="Int32" />
+    <Property Name="isAdmin" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="PhanMemHocTiengTrungEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BaiDaHocs" EntityType="Self.BaiDaHoc" />
+    <EntitySet Name="BaiHocs" EntityType="Self.BaiHoc" />
+    <EntitySet Name="BaiKiemTras" EntityType="Self.BaiKiemTra" />
+    <EntitySet Name="ChiTietBaiHocs" EntityType="Self.ChiTietBaiHoc" />
+    <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+    <FunctionImport Name="Pro_BaiDaHoc" ReturnType="Collection(PhanMemHocTiengTrungModel.Pro_BaiDaHoc_Result)">
+      <Parameter Name="idTaiKhoan" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Pro_BaiKiemTra" ReturnType="Collection(PhanMemHocTiengTrungModel.Pro_BaiKiemTra_Result)">
+      <Parameter Name="idTaiKhoan" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Pro_ChiTietBaiHoc" ReturnType="Collection(PhanMemHocTiengTrungModel.Pro_ChiTietBaiHoc_Result)">
+      <Parameter Name="idBaiHoc" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Pro_BaiDaHoc_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="chude" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="idYoutube" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="diem" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Pro_BaiKiemTra_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="chude" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="idYoutube" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="diem" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Pro_ChiTietBaiHoc_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="tuonghinh" Nullable="true" />
+    <Property Type="String" Name="nghiatiengviet" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="amthanh" Nullable="true" />
+    <Property Type="String" Name="video" Nullable="true" />
+    <Property Type="String" Name="a" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="b" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="c" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="d" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="dapdan" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

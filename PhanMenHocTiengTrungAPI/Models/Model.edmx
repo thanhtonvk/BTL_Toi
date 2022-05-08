@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PhanMemHocTiengTrungModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BaiDaHoc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idBaiHoc" Type="int" Nullable="false" />
+          <Property Name="idTaiKhoan" Type="int" Nullable="false" />
+          <Property Name="diem" Type="int" />
+        </EntityType>
+        <EntityType Name="BaiHoc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="chude" Type="varchar" MaxLength="50" />
+          <Property Name="idYoutube" Type="nvarchar" MaxLength="50" />
+          <Property Name="diem" Type="int" />
+        </EntityType>
+        <EntityType Name="BaiKiemTra">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idBaiHoc" Type="int" Nullable="false" />
+          <Property Name="idTaiKhoan" Type="int" Nullable="false" />
+          <Property Name="diem" Type="int" />
+        </EntityType>
+        <EntityType Name="ChiTietBaiHoc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idBaiHoc" Type="int" Nullable="false" />
+          <Property Name="tuonghinh" Type="nvarchar(max)" />
+          <Property Name="nghiatiengviet" Type="nvarchar" MaxLength="50" />
+          <Property Name="amthanh" Type="nvarchar(max)" />
+          <Property Name="video" Type="nvarchar(max)" />
+          <Property Name="a" Type="nvarchar" MaxLength="50" />
+          <Property Name="b" Type="nvarchar" MaxLength="50" />
+          <Property Name="c" Type="nvarchar" MaxLength="50" />
+          <Property Name="d" Type="nvarchar" MaxLength="50" />
+          <Property Name="dapdan" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="hoten" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ngaysinh" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="sdt" Type="char" MaxLength="10" />
+          <Property Name="hinhanh" Type="nvarchar(max)" />
+          <Property Name="level" Type="int" />
+          <Property Name="isAdmin" Type="bit" />
+        </EntityType>
+        <Function Name="Pro_BaiDaHoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idTaiKhoan" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Pro_BaiKiemTra" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idTaiKhoan" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Pro_ChiTietBaiHoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idBaiHoc" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="PhanMemHocTiengTrungModelStoreContainer">
+          <EntitySet Name="BaiDaHoc" EntityType="Self.BaiDaHoc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BaiHoc" EntityType="Self.BaiHoc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BaiKiemTra" EntityType="Self.BaiKiemTra" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChiTietBaiHoc" EntityType="Self.ChiTietBaiHoc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PhanMemHocTiengTrungModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BaiDaHoc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idBaiHoc" Type="Int32" Nullable="false" />
+          <Property Name="idTaiKhoan" Type="Int32" Nullable="false" />
+          <Property Name="diem" Type="Int32" />
+        </EntityType>
+        <EntityType Name="BaiHoc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="chude" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="idYoutube" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="diem" Type="Int32" />
+        </EntityType>
+        <EntityType Name="BaiKiemTra">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idBaiHoc" Type="Int32" Nullable="false" />
+          <Property Name="idTaiKhoan" Type="Int32" Nullable="false" />
+          <Property Name="diem" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ChiTietBaiHoc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idBaiHoc" Type="Int32" Nullable="false" />
+          <Property Name="tuonghinh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="nghiatiengviet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="amthanh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="video" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="a" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="b" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="c" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="d" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dapdan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="hoten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ngaysinh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sdt" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="hinhanh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="level" Type="Int32" />
+          <Property Name="isAdmin" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="PhanMemHocTiengTrungEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BaiDaHocs" EntityType="Self.BaiDaHoc" />
+          <EntitySet Name="BaiHocs" EntityType="Self.BaiHoc" />
+          <EntitySet Name="BaiKiemTras" EntityType="Self.BaiKiemTra" />
+          <EntitySet Name="ChiTietBaiHocs" EntityType="Self.ChiTietBaiHoc" />
+          <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+          <FunctionImport Name="Pro_BaiDaHoc" ReturnType="Collection(PhanMemHocTiengTrungModel.Pro_BaiDaHoc_Result)">
+            <Parameter Name="idTaiKhoan" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Pro_BaiKiemTra" ReturnType="Collection(PhanMemHocTiengTrungModel.Pro_BaiKiemTra_Result)">
+            <Parameter Name="idTaiKhoan" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Pro_ChiTietBaiHoc" ReturnType="Collection(PhanMemHocTiengTrungModel.Pro_ChiTietBaiHoc_Result)">
+            <Parameter Name="idBaiHoc" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="Pro_BaiDaHoc_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="chude" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="idYoutube" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="diem" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Pro_BaiKiemTra_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="chude" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="idYoutube" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="diem" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Pro_ChiTietBaiHoc_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="tuonghinh" Nullable="true" />
+          <Property Type="String" Name="nghiatiengviet" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="amthanh" Nullable="true" />
+          <Property Type="String" Name="video" Nullable="true" />
+          <Property Type="String" Name="a" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="b" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="c" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="d" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="dapdan" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PhanMemHocTiengTrungModelStoreContainer" CdmEntityContainer="PhanMemHocTiengTrungEntities">
+          <EntitySetMapping Name="BaiDaHocs">
+            <EntityTypeMapping TypeName="PhanMemHocTiengTrungModel.BaiDaHoc">
+              <MappingFragment StoreEntitySet="BaiDaHoc">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idBaiHoc" ColumnName="idBaiHoc" />
+                <ScalarProperty Name="idTaiKhoan" ColumnName="idTaiKhoan" />
+                <ScalarProperty Name="diem" ColumnName="diem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BaiHocs">
+            <EntityTypeMapping TypeName="PhanMemHocTiengTrungModel.BaiHoc">
+              <MappingFragment StoreEntitySet="BaiHoc">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="chude" ColumnName="chude" />
+                <ScalarProperty Name="idYoutube" ColumnName="idYoutube" />
+                <ScalarProperty Name="diem" ColumnName="diem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BaiKiemTras">
+            <EntityTypeMapping TypeName="PhanMemHocTiengTrungModel.BaiKiemTra">
+              <MappingFragment StoreEntitySet="BaiKiemTra">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idBaiHoc" ColumnName="idBaiHoc" />
+                <ScalarProperty Name="idTaiKhoan" ColumnName="idTaiKhoan" />
+                <ScalarProperty Name="diem" ColumnName="diem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChiTietBaiHocs">
+            <EntityTypeMapping TypeName="PhanMemHocTiengTrungModel.ChiTietBaiHoc">
+              <MappingFragment StoreEntitySet="ChiTietBaiHoc">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idBaiHoc" ColumnName="idBaiHoc" />
+                <ScalarProperty Name="tuonghinh" ColumnName="tuonghinh" />
+                <ScalarProperty Name="nghiatiengviet" ColumnName="nghiatiengviet" />
+                <ScalarProperty Name="amthanh" ColumnName="amthanh" />
+                <ScalarProperty Name="video" ColumnName="video" />
+                <ScalarProperty Name="a" ColumnName="a" />
+                <ScalarProperty Name="b" ColumnName="b" />
+                <ScalarProperty Name="c" ColumnName="c" />
+                <ScalarProperty Name="d" ColumnName="d" />
+                <ScalarProperty Name="dapdan" ColumnName="dapdan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaiKhoans">
+            <EntityTypeMapping TypeName="PhanMemHocTiengTrungModel.TaiKhoan">
+              <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="hoten" ColumnName="hoten" />
+                <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+                <ScalarProperty Name="sdt" ColumnName="sdt" />
+                <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="isAdmin" ColumnName="isAdmin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Pro_BaiDaHoc" FunctionName="PhanMemHocTiengTrungModel.Store.Pro_BaiDaHoc">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PhanMemHocTiengTrungModel.Pro_BaiDaHoc_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="chude" ColumnName="chude" />
+                <ScalarProperty Name="idYoutube" ColumnName="idYoutube" />
+                <ScalarProperty Name="diem" ColumnName="diem" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Pro_BaiKiemTra" FunctionName="PhanMemHocTiengTrungModel.Store.Pro_BaiKiemTra">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PhanMemHocTiengTrungModel.Pro_BaiKiemTra_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="chude" ColumnName="chude" />
+                <ScalarProperty Name="idYoutube" ColumnName="idYoutube" />
+                <ScalarProperty Name="diem" ColumnName="diem" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Pro_ChiTietBaiHoc" FunctionName="PhanMemHocTiengTrungModel.Store.Pro_ChiTietBaiHoc">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PhanMemHocTiengTrungModel.Pro_ChiTietBaiHoc_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tuonghinh" ColumnName="tuonghinh" />
+                <ScalarProperty Name="nghiatiengviet" ColumnName="nghiatiengviet" />
+                <ScalarProperty Name="amthanh" ColumnName="amthanh" />
+                <ScalarProperty Name="video" ColumnName="video" />
+                <ScalarProperty Name="a" ColumnName="a" />
+                <ScalarProperty Name="b" ColumnName="b" />
+                <ScalarProperty Name="c" ColumnName="c" />
+                <ScalarProperty Name="d" ColumnName="d" />
+                <ScalarProperty Name="dapdan" ColumnName="dapdan" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

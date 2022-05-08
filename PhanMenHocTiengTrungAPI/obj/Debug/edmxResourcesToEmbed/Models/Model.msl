@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PhanMemHocTiengTrungModelStoreContainer" CdmEntityContainer="PhanMemHocTiengTrungEntities">
+    <EntitySetMapping Name="BaiDaHocs">
+      <EntityTypeMapping TypeName="PhanMemHocTiengTrungModel.BaiDaHoc">
+        <MappingFragment StoreEntitySet="BaiDaHoc">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idBaiHoc" ColumnName="idBaiHoc" />
+          <ScalarProperty Name="idTaiKhoan" ColumnName="idTaiKhoan" />
+          <ScalarProperty Name="diem" ColumnName="diem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BaiHocs">
+      <EntityTypeMapping TypeName="PhanMemHocTiengTrungModel.BaiHoc">
+        <MappingFragment StoreEntitySet="BaiHoc">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="chude" ColumnName="chude" />
+          <ScalarProperty Name="idYoutube" ColumnName="idYoutube" />
+          <ScalarProperty Name="diem" ColumnName="diem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BaiKiemTras">
+      <EntityTypeMapping TypeName="PhanMemHocTiengTrungModel.BaiKiemTra">
+        <MappingFragment StoreEntitySet="BaiKiemTra">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idBaiHoc" ColumnName="idBaiHoc" />
+          <ScalarProperty Name="idTaiKhoan" ColumnName="idTaiKhoan" />
+          <ScalarProperty Name="diem" ColumnName="diem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietBaiHocs">
+      <EntityTypeMapping TypeName="PhanMemHocTiengTrungModel.ChiTietBaiHoc">
+        <MappingFragment StoreEntitySet="ChiTietBaiHoc">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idBaiHoc" ColumnName="idBaiHoc" />
+          <ScalarProperty Name="tuonghinh" ColumnName="tuonghinh" />
+          <ScalarProperty Name="nghiatiengviet" ColumnName="nghiatiengviet" />
+          <ScalarProperty Name="amthanh" ColumnName="amthanh" />
+          <ScalarProperty Name="video" ColumnName="video" />
+          <ScalarProperty Name="a" ColumnName="a" />
+          <ScalarProperty Name="b" ColumnName="b" />
+          <ScalarProperty Name="c" ColumnName="c" />
+          <ScalarProperty Name="d" ColumnName="d" />
+          <ScalarProperty Name="dapdan" ColumnName="dapdan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiKhoans">
+      <EntityTypeMapping TypeName="PhanMemHocTiengTrungModel.TaiKhoan">
+        <MappingFragment StoreEntitySet="TaiKhoan">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="isAdmin" ColumnName="isAdmin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Pro_BaiDaHoc" FunctionName="PhanMemHocTiengTrungModel.Store.Pro_BaiDaHoc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PhanMemHocTiengTrungModel.Pro_BaiDaHoc_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="chude" ColumnName="chude" />
+          <ScalarProperty Name="idYoutube" ColumnName="idYoutube" />
+          <ScalarProperty Name="diem" ColumnName="diem" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Pro_BaiKiemTra" FunctionName="PhanMemHocTiengTrungModel.Store.Pro_BaiKiemTra">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PhanMemHocTiengTrungModel.Pro_BaiKiemTra_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="chude" ColumnName="chude" />
+          <ScalarProperty Name="idYoutube" ColumnName="idYoutube" />
+          <ScalarProperty Name="diem" ColumnName="diem" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Pro_ChiTietBaiHoc" FunctionName="PhanMemHocTiengTrungModel.Store.Pro_ChiTietBaiHoc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PhanMemHocTiengTrungModel.Pro_ChiTietBaiHoc_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tuonghinh" ColumnName="tuonghinh" />
+          <ScalarProperty Name="nghiatiengviet" ColumnName="nghiatiengviet" />
+          <ScalarProperty Name="amthanh" ColumnName="amthanh" />
+          <ScalarProperty Name="video" ColumnName="video" />
+          <ScalarProperty Name="a" ColumnName="a" />
+          <ScalarProperty Name="b" ColumnName="b" />
+          <ScalarProperty Name="c" ColumnName="c" />
+          <ScalarProperty Name="d" ColumnName="d" />
+          <ScalarProperty Name="dapdan" ColumnName="dapdan" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

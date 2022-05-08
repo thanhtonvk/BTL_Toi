@@ -1,0 +1,105 @@
+﻿@model PhanMenHocTiengTrungAPI.Models.ChiTietBaiHoc
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ChiTietBaiHoc</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idBaiHoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idBaiHoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tuonghinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tuonghinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nghiatiengviet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nghiatiengviet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.amthanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.amthanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.video)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.video)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.a)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.a)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.b)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.b)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.c)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.d)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.d)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dapdan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dapdan)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PhanMemHocTiengTrungModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BaiDaHoc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idBaiHoc" Type="int" Nullable="false" />
+    <Property Name="idTaiKhoan" Type="int" Nullable="false" />
+    <Property Name="diem" Type="int" />
+  </EntityType>
+  <EntityType Name="BaiHoc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="chude" Type="varchar" MaxLength="50" />
+    <Property Name="idYoutube" Type="nvarchar" MaxLength="50" />
+    <Property Name="diem" Type="int" />
+  </EntityType>
+  <EntityType Name="BaiKiemTra">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idBaiHoc" Type="int" Nullable="false" />
+    <Property Name="idTaiKhoan" Type="int" Nullable="false" />
+    <Property Name="diem" Type="int" />
+  </EntityType>
+  <EntityType Name="ChiTietBaiHoc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idBaiHoc" Type="int" Nullable="false" />
+    <Property Name="tuonghinh" Type="nvarchar(max)" />
+    <Property Name="nghiatiengviet" Type="nvarchar" MaxLength="50" />
+    <Property Name="amthanh" Type="nvarchar(max)" />
+    <Property Name="video" Type="nvarchar(max)" />
+    <Property Name="a" Type="nvarchar" MaxLength="50" />
+    <Property Name="b" Type="nvarchar" MaxLength="50" />
+    <Property Name="c" Type="nvarchar" MaxLength="50" />
+    <Property Name="d" Type="nvarchar" MaxLength="50" />
+    <Property Name="dapdan" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="hoten" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ngaysinh" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="sdt" Type="char" MaxLength="10" />
+    <Property Name="hinhanh" Type="nvarchar(max)" />
+    <Property Name="level" Type="int" />
+    <Property Name="isAdmin" Type="bit" />
+  </EntityType>
+  <Function Name="Pro_BaiDaHoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTaiKhoan" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Pro_BaiKiemTra" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTaiKhoan" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Pro_ChiTietBaiHoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idBaiHoc" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="PhanMemHocTiengTrungModelStoreContainer">
+    <EntitySet Name="BaiDaHoc" EntityType="Self.BaiDaHoc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BaiHoc" EntityType="Self.BaiHoc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BaiKiemTra" EntityType="Self.BaiKiemTra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChiTietBaiHoc" EntityType="Self.ChiTietBaiHoc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
